@@ -13,7 +13,7 @@ function cacheDOM() {
 }
 
 const baseChargeDura = 31536000;
-const baseChargeReq = 500000000000;
+const baseChargeReq = 1000000000000;
 
 let chargeDura = baseChargeDura;
 let speedBonus = 0.02;
