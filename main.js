@@ -13,7 +13,7 @@ function cacheDOM() {
 }
 
 const baseChargeDura = 31536000;
-const baseChargeReq = 1000000000000;
+const baseChargeReq = 500000000000;
 
 let chargeDura = baseChargeDura;
 let speedBonus = 0.02;
@@ -97,8 +97,8 @@ function convertTime(time) {
 	}
 }
 
-function add_100(x) {
-	document.getElementById(x).value = 100;
+function add_50(x) {
+	document.getElementById(x).value = 50;
 	update();
 }
 
@@ -132,8 +132,8 @@ function upgCost1() {
 	totalCost += baseCostUpg1;
 	if (a == -1) {
 		totalCost -= baseCostUpg1;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			costUpg1 = costUpg1 * 1.1;
 			totalCost += costUpg1;
 		}
@@ -158,8 +158,8 @@ function upgCost2() {
 	totalCost += baseCostUpg2;
 	if (a == -1) {
 		totalCost -= baseCostUpg2;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			costUpg2 = costUpg2 * 1.22;
 			totalCost += costUpg2;
 		}
@@ -184,8 +184,8 @@ function upgCost3() {
 	totalCost += baseCostUpg3;
 	if (a == -1) {
 		totalCost -= baseCostUpg3;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			costUpg3 = costUpg3 * 1.15;
 			totalCost += costUpg3;
 		}
@@ -210,8 +210,8 @@ function upgCost4() {
 	totalCost += baseCostUpg4;
 	if (a == -1) {
 		totalCost -= baseCostUpg4;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			costUpg4 = costUpg4 * 1.17;
 			totalCost += costUpg4;
 		}
@@ -236,8 +236,8 @@ function upgCost5() {
 	totalCost += baseCostUpg5;
 	if (a == -1) {
 		totalCost -= baseCostUpg5;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			costUpg5 = costUpg5 * 1.22;
 			totalCost += costUpg5;
 		}
@@ -262,8 +262,8 @@ function upgCost6() {
 	totalCost += baseCostUpg6;
 	if (a == -1) {
 		totalCost -= baseCostUpg6;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			costUpg6 = costUpg6 * 1.15;
 			totalCost += costUpg6;
 		}
@@ -287,8 +287,8 @@ function upgData1() {
 	let a = lvl_arr[0];
 	if (a == 0) {
 		upgData1 = baseChargeReq;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			upgData1 = upgData1 - (upgData1 * 0.05);
 		}
 	} else {
@@ -305,8 +305,8 @@ function upgData2() {
 	let a = lvl_arr[1];
 	if (a == 0) {
 		upgData2 = speedBonus;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			upgData2 = upgData2 += 0.01;
 		}
 	} else {
@@ -314,7 +314,7 @@ function upgData2() {
 			upgData2 = upgData2 += 0.01;
 		}
 	}
-	x = upgData2 * 100;
+	x = upgData2 * 50;
 	document.getElementById("data_upg_2").innerHTML = x.toFixed(0) + "%";
 	data_arr.splice(1, 1, upgData2);
 }
@@ -324,8 +324,8 @@ function upgData3() {
 	let a = lvl_arr[2];
 	if (a == 0) {
 		upgData3 = productionBonus;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			upgData3 = upgData3 += 0.025;
 		}
 	} else {
@@ -333,7 +333,7 @@ function upgData3() {
 			upgData3 = upgData3 += 0.025;
 		}
 	}
-	x = upgData3 * 100;
+	x = upgData3 * 50;
 	document.getElementById("data_upg_3").innerHTML = x.toFixed(1) + "%";
 	data_arr.splice(2, 1, upgData3);
 }
@@ -350,8 +350,8 @@ function upgData4() {
 	let a = lvl_arr[3];
 	if (a == 0) {
 		upgData4 = baseChargeDura / data4inf;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			upgData4 = upgData4 - (upgData4 * 0.1);
 		}
 	} else {
@@ -359,7 +359,7 @@ function upgData4() {
 			upgData4 = upgData4 - (upgData4 * 0.1);
 		}
 	}
-	if (upgData4 >= 100) {
+	if (upgData4 >= 50) {
 		document.getElementById("data_upg_4").innerHTML = upgData4.toFixed(0);
 	} else {
 		document.getElementById("data_upg_4").innerHTML = upgData4.toFixed(4);
@@ -379,8 +379,8 @@ function upgData5() {
 	let a = lvl_arr[4];
 	if (a == 0) {
 		upgData5 = baseChargeDura / data5inf;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			upgData5 = upgData5 - (upgData5 * 0.1);
 		}
 	} else {
@@ -388,7 +388,7 @@ function upgData5() {
 			upgData5 = upgData5 - (upgData5 * 0.1);
 		}
 	}
-	if (upgData5 >= 100) {
+	if (upgData5 >= 50) {
 		document.getElementById("data_upg_5").innerHTML = upgData5.toFixed(0);
 	} else {
 		document.getElementById("data_upg_5").innerHTML = upgData5.toFixed(4);
@@ -408,8 +408,8 @@ function upgData6() {
 	let a = lvl_arr[5];
 	if (a == 0) {
 		upgData6 = baseChargeDura / data6inf;
-	} else if (a >= 100) {
-		for (let i = 0; i < 100; i++) { 
+	} else if (a >= 50) {
+		for (let i = 0; i < 50; i++) { 
 			upgData6 = upgData6 - (upgData6 * 0.1);
 		}
 	} else {
@@ -417,7 +417,7 @@ function upgData6() {
 			upgData6 = upgData6 - (upgData6 * 0.1);
 		}
 	}
-	if (upgData6 >= 100) {
+	if (upgData6 >= 50) {
 		document.getElementById("data_upg_6").innerHTML = upgData6.toFixed(0);
 	} else {
 		document.getElementById("data_upg_6").innerHTML = upgData6.toFixed(4);
@@ -483,7 +483,7 @@ function optimize() {
 			value_arr = [];
 			tick_arr = [];
 			for(let x = 0; x < lvl_arr.length; x++) {
-				if(lvl_arr[x] == 100) {
+				if(lvl_arr[x] == 50) {
 					value_arr.push(9007199254740991);
 					tick_arr.push(9007199254740991);
 					updateCost();
